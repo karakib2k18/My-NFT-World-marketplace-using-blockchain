@@ -1,11 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
-import { useRouter } from "next/router";
-import React, {useEffect, useMemo, useState } from "react";
-import { useWeb3 } from "@3rdweb/hooks";
-import { ThirdwebSDK } from "@3rdweb/sdk";
-import { Signer } from "ethers";
+//https://eth-rinkeby.alchemyapi.io/v2/kwC4h6h0FfMejY-7-rmUfvIqbDt-Zu20
+
+
+import React, { useEffect, useState, useMemo } from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useWeb3 } from '@3rdweb/hooks'
 import { client } from '../../lib/sanityClient'
+import { ThirdwebSDK } from '@3rdweb/sdk'
 import Header from '../../components/Header'
 import { CgWebsite } from 'react-icons/cg'
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
@@ -32,29 +33,24 @@ const style = {
   ethLogo: `h-6 mr-2`,
   statName: `text-lg w-full text-center mt-1`,
   description: `text-[#8a939b] text-xl w-max-1/4 flex-wrap mt-4`,
-};
+}
 
 const Collection = () => {
-    const router = useRouter()
-    const { provider } = useWeb3()
-    const { collectionId } = router.query
-    const [collection, setCollection] = useState({})
-    const [nfts, setNfts] = useState([])
-    const [listings, setListings] = useState([])
+  const router = useRouter()
+  const { provider } = useWeb3()
+  const { collectionId } = router.query
+  const [collection, setCollection] = useState({})
+  const [nfts, setNfts] = useState([])
+  const [listings, setListings] = useState([])
 
   //
-  //wss://eth-rinkeby.alchemyapi.io/v2/kwC4h6h0FfMejY-7-rmUfvIqbDt-Zu20
 
   const nftModule = useMemo(() => {
     if (!provider) return
 
-    const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/kwC4h6h0FfMejY-7-rmUfvIqbDt-Zu20'
-    )
-    //0xd844fF39FFD5E84a5bdc6CdA2345a19d47c222C0
+    const sdk = new ThirdwebSDK(provider.getSigner())
     return sdk.getNFTModule(collectionId)
-  }, [collectionId, provider])
+  }, [provider])
 
   // get all NFTs in the collection
   useEffect(() => {
@@ -69,11 +65,7 @@ const Collection = () => {
   const marketPlaceModule = useMemo(() => {
     if (!provider) return
 
-    const sdk = new ThirdwebSDK(
-      provider.getSigner(),
-      'https://eth-rinkeby.alchemyapi.io/v2/kwC4h6h0FfMejY-7-rmUfvIqbDt-Zu20'
-    //   'https://rinkeby.infura.io/v3/a464b9152d8c466c8a94a514fce8e837'
-    )
+    const sdk = new ThirdwebSDK(provider.getSigner())
     return sdk.getMarketplaceModule(
       '0xc8998381b061700874dc6956eC3FDEb1172a69cF'
     )
@@ -110,9 +102,10 @@ const Collection = () => {
 
   useEffect(() => {
     fetchCollectionData()
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [collectionId])
 
+  console.log(router.query)
+  console.log(router.query.collectionId)
   return (
     <div className="overflow-hidden">
       <Header />
@@ -207,7 +200,7 @@ const Collection = () => {
             </div>
           </div>
         </div>
-        <div className={style.midRow}> 
+        <div className={style.midRow}>
           <div className={style.description}>{collection?.description}</div>
         </div>
       </div>
@@ -223,6 +216,6 @@ const Collection = () => {
       </div>
     </div>
   )
-};
+}
 
-export default Collection;
+export default Collection

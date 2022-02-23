@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react'
 import { BiHeart } from 'react-icons/bi'
 import Router from 'next/router'
@@ -18,21 +17,20 @@ const style = {
   ethLogo: `h-5 mr-2`,
   likes: `text-[#8a939b] font-bold flex items-center w-full justify-end mt-3`,
   likeIcon: `text-xl mr-2`,
-};
+}
 
 const NFTCard = ({ nftItem, title, listings }) => {
-  const [isListed, setIsListed] = useState(false);
-  const [price, setPrice] = useState(0);
+  const [isListed, setIsListed] = useState(false)
+  const [price, setPrice] = useState(0)
 
   useEffect(() => {
-    const listing = listings.find((listing) => listing.asset.id === nftItem.id);
-    console.log(nftItem)
-
+    const listing = listings.find((listing) => listing.asset.id === nftItem.id)
     if (Boolean(listing)) {
-      setIsListed(true);
-      setPrice(listing.buyoutCurrencyValuePerToken.displayValue);
+      setIsListed(true)
+      setPrice(listing.buyoutCurrencyValuePerToken.displayValue)
     }
-  }, [listings, nftItem]);
+  }, [listings, nftItem])
+
   return (
     <div
       className={style.wrapper}
@@ -40,7 +38,7 @@ const NFTCard = ({ nftItem, title, listings }) => {
         Router.push({
           pathname: `/nfts/${nftItem.id}`,
           query: { isListed: isListed },
-        });
+        })
       }}
     >
       <div className={style.imgContainer}>
@@ -69,12 +67,12 @@ const NFTCard = ({ nftItem, title, listings }) => {
         <div className={style.likes}>
           <span className={style.likeIcon}>
             <BiHeart />
-          </span>{" "}
+          </span>{' '}
           {nftItem.likes}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default NFTCard;
+export default NFTCard
