@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import { IoMdSnow } from 'react-icons/io'
 import { AiOutlineHeart } from 'react-icons/ai'
 

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { BsFillCartFill } from 'react-icons/bs'
 
 const style = {

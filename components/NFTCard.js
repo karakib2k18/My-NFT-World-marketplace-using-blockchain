@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useEffect, useState } from 'react'
 import { BiHeart } from 'react-icons/bi'
 import Router from 'next/router'

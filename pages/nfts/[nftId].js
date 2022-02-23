@@ -44,6 +44,7 @@ const Nft = () => {
 
       setSelectedNft(selectedNftItem)
     })()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [nftModule])
 
   const marketPlaceModule = useMemo(() => {

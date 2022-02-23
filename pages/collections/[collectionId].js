@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 //https://eth-rinkeby.alchemyapi.io/v2/kwC4h6h0FfMejY-7-rmUfvIqbDt-Zu20
 
 
@@ -50,7 +51,7 @@ const Collection = () => {
 
     const sdk = new ThirdwebSDK(provider.getSigner())
     return sdk.getNFTModule(collectionId)
-  }, [provider])
+  }, [collectionId, provider])
 
   // get all NFTs in the collection
   useEffect(() => {
@@ -102,6 +103,7 @@ const Collection = () => {
 
   useEffect(() => {
     fetchCollectionData()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [collectionId])
 
   console.log(router.query)
