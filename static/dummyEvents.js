@@ -1,26 +1,26 @@
 export const dummyEvents = [
     {
       price: 17,
-      from: '0xQazi',
+      from: '0xrakib',
       to: '0xDavid',
-      date: '4 months ago',
+      date: '4 minutes ago',
     },
     {
       price: 17,
-      from: '0xQazi',
+      from: '0xrakib',
       to: '0xDavid',
-      date: '4 months ago',
+      date: '4 minutes ago',
     },
     {
       price: 17,
-      from: '0xQazi',
+      from: '0xrakib',
       to: '0xDavid',
-      date: '4 months ago',
+      date: '4 minutes ago',
     },
     {
       price: 17,
-      from: '0xQazi',
+      from: '0xrakib',
       to: '0xDavid',
-      date: '4 months ago',
+      date: '4 minutes ago',
     },
   ]

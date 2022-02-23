@@ -24,7 +24,7 @@ const style = {
 const Header = () => {
   return (
     <div className={style.wrapper}>
-      <Link href='/home' passHref>
+      <Link href='/' passHref>
       <div className={style.logoContainer}>
        <Image src={opensealogo} height={40} width={40} alt='logo' />
        <div className={style.logoText}>NFT</div>
