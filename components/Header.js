@@ -27,7 +27,7 @@ const Header = () => {
       <Link href='/' passHref>
       <div className={style.logoContainer}>
        <Image src={opensealogo} height={40} width={40} alt='logo' />
-       <div className={style.logoText}>NFT</div>
+       <div className={style.logoText}> RAKIB NFT</div>
        {/* <div className={style.logoText}>My-NFT-WORLD</div> */}
       </div>
       </Link>
