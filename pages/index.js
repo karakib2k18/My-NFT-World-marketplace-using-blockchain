@@ -10,8 +10,8 @@ import toast, { Toaster } from 'react-hot-toast'
 
 const style = {
   wrapper: ``,
-  walletConnectWrapper: `bg-[#2b2233] flex flex-col justify-center items-center h-screen w-screen bg-[#3b3d42] `,
-  button: `border border-[#282b2f] bg-[#771fce] text-white p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer text-black`,
+  walletConnectWrapper: `bg-[#28402c] flex flex-col justify-center items-center h-screen w-screen bg-[#3b3d42] `,
+  button: `border border-[#282b2f] bg-[#771fce] text-white p-[0.8rem] text-xl font-semibold rounded-lg cursor-pointer`,
   details: `text-lg text-center text-white font-semibold mt-4`,
   // details: `text-lg text-center text=[#282b2f] font-semibold mt-4`,
 }
@@ -67,7 +67,7 @@ export default function Home() {
           Connect Wallet
         </button>
         <div className={style.details}>
-          You need Chrome or firefox or Brave browserto be
+          You need Chrome or firefox or Brave browser to be
           <br /> able to run this app.
         </div>
       </div>
