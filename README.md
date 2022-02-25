@@ -1,6 +1,9 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Live link: https://rakib-nft-blockchain.vercel.app/
+## Sanity.io Database: https://karakib2k18.sanity.studio/desk
+## ThirdWeb/Web3.0 Marketplace Dashboard link:  https://thirdweb.com/dashboard
+## to-do-list-with-react-and-sanity: https://www.sanity.io/guides/to-do-list-with-react-and-sanity
+## Request testnet LINK free ETH testing coin: https://faucets.chain.link/rinkeby
 
 First, run the development server:
 
